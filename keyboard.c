@@ -1,6 +1,6 @@
 #include "keyboard.h"
 
-kb_keycode us_querty_keycodes[0xE0] = {
+static const kb_keycode us_querty_keycodes[0xE0] = {
     KEY_INVALID,//0x00 invalid
     KEY_ESC_PRESSED,//0x01 ESCAPE
     KEY_1_PRESSED,//0x02
@@ -228,7 +228,7 @@ kb_keycode us_querty_keycodes[0xE0] = {
     KEY_INVALID,//0xDF
 };
 
-kb_keycode us_querty_keycodes_extra1[0xEE] = {
+static const kb_keycode us_querty_keycodes_extra1[0xEE] = {
     KEY_INVALID,//0x00
     KEY_INVALID,//0x01
     KEY_INVALID,//0x02
