@@ -476,7 +476,7 @@ static unsigned char inb(unsigned short port) {//you can remove this if your ker
     return ret;
 } 
 
-unsigned char get_scancode(){
+static unsigned char get_scancode(){
     while(!(inb(0x64) & 1)) asm volatile ("pause"); //check keyboard status port, see if there's a key available
     return inb(0x60); //get a key from the data port
 }
