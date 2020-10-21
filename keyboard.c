@@ -470,7 +470,7 @@ static const kb_keycode us_querty_keycodes_extra1[0xEE] = {
     KEY_INVALID,//0xED,MULTIMEDIA
 };
 
-static unsigned char inb(unsigned short port) {//you can remove this if your kernel already has inb an implementation
+static unsigned char inb(unsigned short port) {//you can remove this if your kernel already has an inb implementation
     unsigned char ret;
     asm volatile ( "inb %1, %0" : "=a"(ret) : "Nd"(port) );
     return ret;
